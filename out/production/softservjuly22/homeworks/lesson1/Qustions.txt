@@ -1,3 +1,6 @@
 Assignment1Part1
 1. How to loop reading data from console while it's not an integer number?
 2. How to not return with return method if it's mistake of evaluation?
+
+Assignment1Part3
+1. Finish it.
