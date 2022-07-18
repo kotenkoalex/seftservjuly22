@@ -33,29 +33,18 @@ public class Assignment1Part3 {
         e = scanner.nextDouble();
     }
 
-    //This method finds inner sides (evaluate 2 inner sides of pentagon)
+    //Find inner sides (evaluate 2 inner sides of pentagon)
     private static void evaluateInnerPentagonSides() {
         g = evaluateInnerSide(a, b);
         f = evaluateInnerSide(g, c);
     }
 
-    /**
-     * This method finds hypotenuse of right triangle (it is inner one of sides)
-     *
-     * @param leg1 - take first leg of right triangle
-     * @param leg2 - take second leg of right triangle
-     * @return hypotenuse
-     */
+    //Find hypotenuse of right triangle (it is inner one of sides)
     private static double evaluateInnerSide(double leg1, double leg2) {
         return Math.sqrt(leg1 * leg1 + leg2 * leg2);
     }
 
-    /**
-     * This method finds a pentagon area (sum of 3 triangles areas)
-     * First triangle has: a,b,g sides
-     * Second triangle has: g,c,f sides
-     * Third triangle has: f,d,e sides
-     */
+    //Find a pentagon area (sum of 3 triangles areas)
     private static void findPentagonArea() {
         double firstTriangleAria = findTriangleArea(a, b, g);
         double secondTriangleAria = findTriangleArea(g, c, f);
@@ -64,15 +53,6 @@ public class Assignment1Part3 {
         System.out.println("The aria of pentagon is equal - " + pentagonArea);
     }
 
-    /**
-     * This method evaluate triangles aria
-     * Heron's formula for the area of triangle on three sides S = √p(p - a)(p - b)(p - c)
-     *
-     * @param side1 - take first side of triangle
-     * @param side2 - take second side of triangle
-     * @param side3 - take third side of triangle
-     * @return - evaluated triangles aria
-     */
     private static double findTriangleArea(double side1, double side2, double side3) {
         double perimeter = side1 + side2 + side3;
         return Math.sqrt(

@@ -12,13 +12,6 @@ public class Assignment1Part4 {
                 (2 * factorial(5) + 3 * factorial(8)) / (factorial(6) + factorial(4)));
     }
 
-    /**
-     * This method evaluate factorial
-     * Notice - factorial 0 == 1
-     *
-     * @param value - take current value (must be positive integer)
-     * @return - evaluated factorial
-     */
     private static int factorial(int value) {
         int result = 1;
         for (int i = value; i > 0; i--) {

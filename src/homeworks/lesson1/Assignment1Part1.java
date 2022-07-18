@@ -18,76 +18,50 @@ public class Assignment1Part1 {
         int a = readDataFromUser("a");
         int b = readDataFromUser("b");
 
+        printResult(a, b);
+    }
+
+    private static void printResult(int a, int b) {
         System.out.println("a + b = " + a + " + " + b + " = " + summation(a, b));
         System.out.println("a - b = " + a + " - " + b + " = " + subtraction(a, b));
         System.out.println("a * b = " + a + " * " + b + " = " + multiplication(a, b));
-        System.out.println("a / b = " + a + " / " + b + " = " + division(a, b));
+        if (b > 0) {
+            System.out.println("a / b = " + a + " / " + b + " = " + division(a, b));
+        } else {
+            System.out.println("a / b = " + a + " / " + b + " - provides division by zero");
+        }
     }
 
-    /**
-     * This method read integer number from console.
-     *
-     * @param name - take name of input variable (a or b)
-     * @return - integer number
-     */
     private static int readDataFromUser(String name) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Please input integer number: " + name);
-        return scanner.nextInt();
-    }
-
-    /**
-     * This method makes summation
-     *
-     * @param a - take first number
-     * @param b - take second number
-     * @return - result of summation
-     */
-    private static int summation(int a, int b) {
-        return a + b;
-    }
-
-    /**
-     * This method makes subtraction
-     *
-     * @param a - take first number
-     * @param b - take second number
-     * @return - result of subtraction
-     */
-    private static int subtraction(int a, int b) {
-        return a - b;
-    }
-
-    /**
-     * This method makes multiplication
-     *
-     * @param a - take first number
-     * @param b - take second number
-     * @return - result of multiplication
-     */
-    private static int multiplication(int a, int b) {
-        return a * b;
-    }
-
-    /**
-     * This method makes division
-     *
-     * @param a - take first number
-     * @param b - take second number
-     * @return - result of division
-     */
-    private static int division(int a, int b) {
+        boolean isEnter = false;
         int result = 0;
-
-        //try-catch block needs for chek zero division
-        try {
-            result = a / b;
-            return result;
-        } catch (ArithmeticException arithmeticException) {
-            System.out.println("Sorry, but division on 0 is forbidden");
-
+        while (!isEnter) {
+            System.out.println("Please input integer number: " + name);
+            String line = scanner.nextLine();
+            try {
+                result = Integer.parseInt(line);
+                isEnter = true;
+            } catch (NumberFormatException e) {
+                System.out.print("Wrong data. ");
+            }
         }
         return result;
     }
 
+    private static int summation(int a, int b) {
+        return a + b;
+    }
+
+    private static int subtraction(int a, int b) {
+        return a - b;
+    }
+
+    private static int multiplication(int a, int b) {
+        return a * b;
+    }
+
+    private static int division(int a, int b) {
+        return a / b;
+    }
 }

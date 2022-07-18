@@ -1,6 +1,4 @@
 .idea/
 *.iml
 *.iws
-/target/
-/lessons/
-Qustions.txt
+/out/
