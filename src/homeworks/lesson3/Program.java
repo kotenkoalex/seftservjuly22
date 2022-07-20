@@ -18,7 +18,7 @@ public class Program {
         // ********************************************************************************************* //
 
         //Task2: Employee
-        //create 3 objects of Employee type. Input information about them.
+        //create 3 objects of Employee type. InputData information about them.
         Employee employee1 = new Employee("Sam", 10, 160);
         Employee employee2 = new Employee("Adriana", 15, 180);
         Employee employee3 = new Employee("Niki", 20, 120);

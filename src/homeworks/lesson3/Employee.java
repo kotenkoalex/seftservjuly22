@@ -13,7 +13,7 @@ package homeworks.lesson3;
  * toString() - to output information about employee
  * changeRate(int rate) - to change the rate of some employee and recalculate his salary
  * getBonuses() – to calculate 10% from salary
- * In the method main() create 3 objects of Employee type. Input information about them.
+ * In the method main() create 3 objects of Employee type. InputData information about them.
  * Display the total salary of all workers to screen
  */
 
